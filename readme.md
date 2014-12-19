@@ -6,6 +6,8 @@ This repository contains the source code and errata for my [Introduction to jQue
 This series is provided free of charge, but if you find it useful, I'd appreciate a visit
 to my [Amazon Wishlist](http://www.amazon.com/wishlist/2TCL1D08EZEYE). 
 
+As I find mistakes, or things that may not exactly clear, I'll be updating the [errata](errata.md).
+
 | Video         | Code        | 
 | ------------- |-------------|
 | [Unit 1](https://www.youtube.com/watch?v=u08toYzodwE&index=1&list=PL_z-rqJYNijrtVAc5qQbkzHnDELANGiOn)        | [unit1](/unit1)       |
@@ -18,6 +20,6 @@ to my [Amazon Wishlist](http://www.amazon.com/wishlist/2TCL1D08EZEYE).
 | [Real World Example 2](https://www.youtube.com/watch?v=jDwR2MwYaiU&index=8&list=PL_z-rqJYNijrtVAc5qQbkzHnDELANGiOn) | [unit5b](/unit5b) |
 | [Unit 6](https://www.youtube.com/watch?v=1nyRCLlKBec&index=9&list=PL_z-rqJYNijrtVAc5qQbkzHnDELANGiOn) | [unit6](/unit6) |
 | [Unit 7](https://www.youtube.com/watch?v=n-bIHHJ8sFM&index=10&list=PL_z-rqJYNijrtVAc5qQbkzHnDELANGiOn) | [unit7](/unit7) |
-| [Unit 8]() | [unit8](/unit8) |
-| [Unit 9]() | [unit9](/unit9) |
+| [Unit 8](https://www.youtube.com/watch?v=a4ud8oH3h-8&list=PL_z-rqJYNijrtVAc5qQbkzHnDELANGiOn&index=11) | [unit8](/unit8) |
+| [Unit 9](https://www.youtube.com/watch?v=8tuO3-m8Eio&index=12&list=PL_z-rqJYNijrtVAc5qQbkzHnDELANGiOn) | [unit9](/unit9) |
 
