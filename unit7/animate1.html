@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Animate</title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width">
+		<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+		<script>
+		$(document).ready(function() { 
+
+			$para = $("#para1");
+			
+			$("#anim1Para").click(function() {
+				$para.animate({
+					width:100,
+					left:"+200"
+				},1000);
+			});
+
+		});
+		</script>
+		<style>
+			#para1 {
+				position:relative;
+			}
+		</style>
+	</head>
+	<body>
+
+		<p id="para1">
+			This is a paragraph I'll animate. This is a paragraph I'll animate. This is a paragraph I'll animate. This is a paragraph I'll animate. This is a paragraph I'll animate. This is a paragraph I'll animate. This is a paragraph I'll animate.
+		</p>
+		
+		<button id="anim1Para">Animate Paragraph</button><br/>
+
+	</body>
+</html>

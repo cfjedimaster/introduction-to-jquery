@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Events</title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width">
+		<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+
+	</head>
+	<body>
+
+		<p id="intro">Click me!</p>
+
+		<input id="name" type="text">
+
+		<script>
+		$("#intro").click(function() {
+			console.log("You clicked me!");
+		});
+
+		$("#name").change(function() {
+			console.log("You changed me to " + 
+			$(this).val());
+		});
+		</script>
+		
+	</body>
+</html>

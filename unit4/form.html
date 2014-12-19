@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Events</title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width">
+		<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+
+	</head>
+	<body>
+
+		<form id="myForm">
+			name: <input type="text" name="name"><br/>
+			email: <input type="email" name="email"><br/>
+			<input type="submit">
+		</form>
+		
+		<script>
+		$("input[name=name]").blur(function() {
+			console.log("blur on name");
+		});
+
+		$("input[name=name]").focus();
+
+		$("#myForm").submit(function(e) {
+			
+			var name = $("input[name=name]").val();
+			var email = $("input[name=email]").val();
+			console.log(name, email);
+			
+			return false;
+			
+		});
+
+		</script>
+		
+	</body>
+</html>

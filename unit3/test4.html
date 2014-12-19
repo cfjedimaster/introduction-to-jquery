@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Form Examples</title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width">
+		<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+		
+	</head>
+	<body>
+
+	<form id="mainForm">
+
+		<p>
+		Name: <input type="text" name="name" id="name">
+		</p>
+
+		<p>
+		Email: <input type="text" name="email" id="email">
+		</p>
+
+		<p>
+		Gender:<br/>
+		<input type="radio" name="gender" value="Male">Male<br/>
+		<input type="radio" name="gender" value="Female">Female<br/>
+		</p>
+
+		<p>
+		Favorite Colors:<br/>
+		<input type="checkbox" name="favcolor" value="green">Green<br/>
+		<input type="checkbox" name="favcolor" value="red">Red<br/>
+		<input type="checkbox" name="favcolor" value="yellow">Yellow<br/>
+		<input type="checkbox" name="favcolor" value="blue">Blue<br/>
+		</p>
+
+		<p>
+		Something else:
+		<select name="something" id="something">
+		<option value="alpha">Alpha</option>
+		<option value="beta">Beta</option>
+		<option value="gamma">Gamma</option>
+		</select>
+		</p>
+
+		<p>
+		Comments:
+		<textarea id="comments"></textarea>
+		</p>
+		
+		<input type="button" value="Test" onclick="getformfields()">
+	</form>
+
+		
+
+	<script>
+	function getformfields(){
+		console.log("Getting form fields");
+		
+		console.log("name=" + $("#name").val());
+		console.log("email=" + $("#email").val());
+		console.log("gender=" + $("input:radio[name=gender]:checked").val());
+
+		//Below is not right!
+		console.log("favcolor=" + $("input:checkbox[name=favcolor]:checked").val());
+
+		//This is though!
+		var checked = $("input:checkbox[name=favcolor]:checked");
+		for (var i = 0; i < checked.length; i++) {
+			console.log("one color=" + $(checked[i]).val());
+		}
+		
+		console.log("something=" + $("#something").val());
+		
+		console.log("comments=" + $("#comments").val());
+
+	}
+	</script>		
+	</body>
+</html>

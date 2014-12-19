@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Show Hide</title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width">
+		<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+		<script>
+		$(document).ready(function() { 
+
+			$para = $("#para1");
+			
+			$("#hidePara").click(function() {
+				$para.hide();
+			});
+
+			$("#showPara").click(function() {
+				$para.show();
+			});
+
+			$("#hideParaSlow").click(function() {
+				$para.hide(1000);
+			});
+			
+			$("#showParaSlow").click(function() {
+				$para.show(1000);
+			});
+
+		});
+		</script>
+	</head>
+	<body>
+
+		<p id="para1">
+			This is a paragraph I'll hide....
+		</p>
+
+		<button id="hidePara">Hide Paragraph</button><br/>
+		<button id="showPara">Show Paragraph</button><br/>
+		<button id="hideParaSlow">Hide Paragraph Slow</button><br/>
+		<button id="showParaSlow">Show Paragraph Slow</button><br/>
+		
+	</body>
+</html>

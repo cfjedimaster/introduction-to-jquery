@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Events</title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width">
+		<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+
+	</head>
+	<body>
+
+		<p id="content">
+		This is some text for my test paragraph. It doesn't have anything interesting in it. If you have read this far, you probably have a touch of OCD. Of course, I think all programmers have a touch of OCD, so that isn't saying much.
+		</p>
+
+		<p id="morecontent">
+		This is my second paragraph. This is my second paragraph. This is my second paragraph. This is my second paragraph. This is my second paragraph. This is my second paragraph.
+		</p>
+
+		<!--
+		<p>
+		<a href="" onclick="$('#content').prepend('<b>Ray said...</b>');return false">Prepend text</a><br/>
+		<a href="" onclick="$('#content').append(' <b>or did he?</b>');return false">Append text</a><br/>
+		</p>
+		-->
+
+		<p>
+		<a id="prependLink" href="" >Prepend text</a><br/>
+		<a id="appendLink" href="">Append text</a><br/>
+			
+		</p>
+		
+		<script>
+		$("#prependLink").click(function() {
+			$('#content').prepend('<b>Ray said...</b>');
+		});
+
+		$("#appendLink").click(function() {
+			$('#content').append(' <b>or did he?</b>');
+		});
+
+		</script>
+		
+	</body>
+</html>

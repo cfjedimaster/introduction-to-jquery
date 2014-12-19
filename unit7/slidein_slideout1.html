@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Sliding</title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width">
+		<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+		<script>
+		$(document).ready(function() { 
+
+			$para = $("#para1");
+			$para2 = $("#para2");
+			
+			$("#slideUpPara").click(function() {
+				//default 400
+				$para.slideUp();
+			});
+
+			$("#slideDownPara").click(function() {
+				//default 400
+				$para.slideDown();
+			});
+
+			$("#slideParaToggle").click(function() {
+				$para2.slideToggle();
+			});
+			
+		});
+		</script>
+	</head>
+	<body>
+
+		<p id="para1">
+			This is a paragraph I'll slide....
+		</p>
+
+		<p id="para2" style="display:none">
+			This is another paragraph I'll hidden by default.
+		</p>
+		
+		<button id="slideUpPara">Slide up Paragraph</button><br/>
+		<button id="slideDownPara">Slide down Paragraph</button><br/>
+		<button id="slideParaToggle">Slide Toggle Example</button><br/>
+
+	</body>
+</html>

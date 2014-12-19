@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Custom Plugin</title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width">
+		<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+		<script>
+			
+		$.fn.cowbell = function() {
+			this.css("font-weight", "bold");
+			return this;
+		}
+
+		$(document).ready(function() { 
+			$("p").cowbell().prepend("...modified...");
+		});
+		</script>
+		
+	</head>
+	<body>
+
+		<p>
+			My text.
+		</p>
+
+	</body>
+</html>

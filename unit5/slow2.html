@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>AJAX Tests</title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width">
+		<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+		<script>
+		$(document).ready(function() {
+			
+			$("#getStuffButton").click(function() {
+
+				$("#loadingArea").html("<i>Stand by, loading stuff!</i>");
+				$(this).attr("disabled","disabled");
+				
+				var name = $("#name").val();
+				
+				$.post("reversename_slow.cfm", {name:name}, function(data, status, jqXHR) {
+					$("#loadingArea").html(data);
+					$("#getStuffButton").removeAttr("disabled");
+				});
+				
+			});
+			
+		});
+		</script>
+	</head>
+	<body>
+
+		<input type="text" id="name" placeholder="Enter a name">
+		<button id="getStuffButton">Get Stuff</button>
+		
+		<div id="loadingArea"></div>
+		
+	</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Show Hide</title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width">
+		<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+		<script>
+		$(document).ready(function() { 
+
+			$para = $("#para1");
+			$para2 = $("#para2");
+			
+			$("#hidePara").click(function() {
+				//slow is 600
+				$para.hide('slow');
+			});
+
+			$("#showPara").click(function() {
+				//fast is 200
+				$para.show('fast');
+			});
+
+			$("#hideParaComplete").click(function() {
+				$para2.hide(1000, function() {
+					console.log("i'm done hiding!");	
+				});
+			});
+			
+			$("#showParaComplete").click(function() {
+				//$para2.show(1000).prepend("MODIFIED");
+				
+				$para2.show(1000, function() {
+					$(this).prepend("MODIFIED");
+				});	
+				
+			});
+
+		});
+		</script>
+	</head>
+	<body>
+
+		<p id="para1">
+			This is a paragraph I'll hide....
+		</p>
+
+		<p id="para2" style="display:none">
+			This is another paragraph I'll hidden by default.
+		</p>
+		
+		<button id="hidePara">Hide Paragraph (Slow)</button><br/>
+		<button id="showPara">Show Paragraph (Fast)</button><br/>
+		<button id="hideParaComplete">Hide Paragraph Complete</button><br/>
+		<button id="showParaComplete">Show Paragraph Complete</button><br/>
+		
+	</body>
+</html>

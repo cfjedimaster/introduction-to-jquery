@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Deferred Test</title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width">
+		<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+		<script>
+		$(document).ready(function() { 
+
+			var promise = $.get("data.txt");
+			
+			promise.done(function(res) {
+				console.log("Success: "+res);
+			});
+			
+			promise.fail(function(err) {
+				console.log("Error: ", err.statusText);				
+			});
+			
+			promise.always(function() {
+				console.log("I always run.");
+			});
+
+
+		});
+		</script>
+
+	</head>
+	<body>
+
+
+	</body>
+</html>

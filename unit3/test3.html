@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>append, prepend, wrap</title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width">
+		<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+
+	</head>
+	<body>
+
+		<p id="content">
+		This is some text for my test paragraph. It doesn't have anything interesting in it. If you have read this far, you probably have a touch of OCD. Of course, I think all programmers have a touch of OCD, so that isn't saying much.
+		</p>
+
+		<p id="morecontent">
+		This is my second paragraph. This is my second paragraph. This is my second paragraph. This is my second paragraph. This is my second paragraph. This is my second paragraph.
+		</p>
+
+		<p>
+		<a href="" onclick="$('#content').prepend('<b>Ray said...</b>');return false">Prepend text</a><br/>
+		<a href="" onclick="$('#content').append(' <b>or did he?</b>');return false">Append text</a><br/>
+			
+		<a href="" onclick="$('#morecontent').prependTo('#content');return false">Move second to first...</a><br/>
+		<a href="" onclick="$('#morecontent').appendTo('#content');return false">Move second back...</a><br/>
+
+		<a href="" onclick="$('#content').text('<b>CLASSIFIED</b>');return false">Redact</a><br/>
+		<a href="" onclick="$('#content').html('<b>CLASSIFIED</b>');return false">Redact (better)</a><br/>
+
+		<a href="" onclick="$('#morecontent').wrap('<b><i></i></b>');return false">Make second use bold and italics.</a><br/>
+		</p>
+		
+	</body>
+</html>

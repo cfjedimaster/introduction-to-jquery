@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Real Form</title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width">
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+		<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+		<script src="form.js"></script>
+	</head>
+	<body>
+
+		<div class="container">
+
+		<h1>Contact Form</h1>
+		
+			<div id="formArea">
+				<form role="form" id="contactForm" novalidate>
+
+					<div id="resultError"></div>
+
+					<div class="form-group">
+						<label for="name">* Your Name</label>
+						<input type="text" class="form-control" id="name" name="name" placeholder="Enter name">
+					</div>
+
+					<div class="form-group">
+						<label for="email">Email address</label>
+						<input type="email" class="form-control" id="email" name="email" placeholder="Enter email">
+					</div>
+
+					<div class="form-group">
+						<label for="comments">* Comments</label>
+						<textarea name="comments" id="comments" class="form-control"></textarea>
+					</div>
+
+					<button type="submit" class="btn btn-default btn-primary">Submit</button>
+				</form>
+
+			</div>
+			
+		</div>
+		
+	</body>
+</html>

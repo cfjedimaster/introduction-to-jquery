@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>addRemoveClass</title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width">
+		<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+		<style>
+		.highlight {
+			font-weight: bold;
+			background-color: rgb(235, 244, 13);
+		}
+			
+		.footer {
+			font-style: italic;
+		}
+		</style>
+	</head>
+	<body>
+
+		<p id="intro">
+			This is the paragraph with an ID of footer.
+		</p>
+
+		<p>
+			A random paragraph.
+		</p>
+		
+		<p class="footer">
+			The footer paragraph.
+		</p>
+
+		<script>
+			$("#intro").addClass("highlight");
+			$("p.footer").removeClass("footer");
+		</script>
+
+	</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Deferred Test</title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width">
+		<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+		<script>
+		$(document).ready(function() { 
+
+			var promise = $.get("data.txt");
+			var promise2 = $.get("data2.txt");
+			
+			$.when(promise, promise2).done(function(res1, res2) {
+				console.log("Contents of first: ", res1[0]);
+				console.log("Contents of second: ", res2[0]);
+			}).fail(function(err) {
+				console.log("Error: "+err.statusText);
+			});
+
+		});
+		</script>
+
+	</head>
+	<body>
+
+
+	</body>
+</html>

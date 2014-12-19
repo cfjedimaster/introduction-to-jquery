@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Deferred Test</title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width">
+		<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+		<script>
+			
+		var cache = {};
+			
+		function gitHubSearcher(term) {
+			var def = $.Deferred();
+			
+			if(!cache[term]) {
+				$.get("https://api.github.com/search/repositories", {"q":term}, function(res, code) {
+					cache[term] = res.items;
+					def.resolve(res.items);	
+				});
+			} else {
+				console.log("Instant!");
+				def.resolve(cache[term]);	
+			}
+			
+			return def.promise();
+			
+		}
+			
+		$(document).ready(function() { 
+
+			var $search = $("#searchText");
+			var $results = $("#results");
+			
+			$("#getStuffBtn").click(function() {
+				var term = $search.val();
+				if(term === '') return;
+				
+				//clear existing
+				$results.html("");
+
+				//call async op
+				searchResult = gitHubSearcher(term);
+				
+				searchResult.done(function(results) {
+					
+					if(results.length) {
+						var s = "<h2>Results</h2>";
+						for(var i=0, len=results.length; i<len; i++) {
+							var entry = results[i];
+							s += "<p><strong>"+entry.name+"</strong><br/>";
+							s += "By: " + entry.owner.login+"<br/>";
+							s += "Updated: " + entry.updated_at+"<br/>";
+							s += entry.description;
+							s += "</p>";
+						}
+						$results.html(s);
+					} else {
+						$results.html("<p>No results.</p>");	
+					}
+				});
+				
+			});
+
+		});
+		</script>
+
+	</head>
+	<body>
+
+		<input type="search" id="searchText"> 
+		<button id="getStuffBtn">Search GitHub</button>
+		<div id="results"></div>
+		
+	</body>
+</html>

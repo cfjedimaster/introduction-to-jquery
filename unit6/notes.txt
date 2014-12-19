@@ -1,0 +1,9 @@
+tablesorter
+	talesorter.com
+	
+fotorama
+	fotorama.com
+	
+.validate
+	http://jqueryvalidation.org/
+	

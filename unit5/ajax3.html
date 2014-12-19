@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>AJAX Tests</title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width">
+		<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+		<script>
+		$(document).ready(function() {
+			
+			$("#getStuffButton").click(function() {
+				
+				$.ajax({
+					url:"data2.json", 
+					error:function(jqXHR, status, error) {
+						$("#loadingArea").html("<strong>ERROR! " + error + "</strong>");	
+					},
+					success:function(data, status, jqXHR) {
+						var result = "My name is "+data.name + " and I'm "+data.age + " years old.<br/>";
+						result += "I like: <ul>";
+						for(var i=0, len=data.likes.length; i<len; i++) {
+							result += "<li>" + data.likes[i] + "</li>";
+						}
+						result += "</ul>";
+						$("#loadingArea").html(result);
+					},
+					dataType:'json'
+				});
+				
+			});
+			
+		});
+		</script>
+	</head>
+	<body>
+
+		<button id="getStuffButton">Get Stuff</button>
+		
+		<div id="loadingArea"></div>
+		
+	</body>
+</html>

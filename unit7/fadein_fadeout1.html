@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Fading</title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width">
+		<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+		<script>
+		$(document).ready(function() { 
+
+			$para = $("#para1");
+			$para2 = $("#para2");
+			
+			$("#fadeOutPara").click(function() {
+				//default 400
+				$para.fadeOut();
+			});
+
+			$("#fadeInPara").click(function() {
+				//default 400
+				$para.fadeIn();
+			});
+
+			$("#fadeParaToggle").click(function() {
+				$para2.fadeToggle();
+			});
+			
+			$("#fadeTo").click(function() {
+				$para.fadeTo(1000, 0.5);
+			});
+		});
+		</script>
+	</head>
+	<body>
+
+		<p id="para1">
+			This is a paragraph I'll fade....
+		</p>
+
+		<p id="para2" style="display:none">
+			This is another paragraph I'll hidden by default.
+		</p>
+		
+		<button id="fadeOutPara">Fade Out Paragraph</button><br/>
+		<button id="fadeInPara">Fade in Paragraph</button><br/>
+		<button id="fadeParaToggle">Fade Toggle Example</button><br/>
+		<button id="fadeTo">Fade to 0.5</button>
+	</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>AJAX Tests</title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width">
+		<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+		<script>
+		$(document).ready(function() {
+			
+			$("#getStuffButton").click(function() {
+				
+				$.get("data.txt", function(data, status, jqXHR) {
+					console.log(data);
+				},"json");
+				
+			});
+			
+		});
+		</script>
+	</head>
+	<body>
+
+		<button id="getStuffButton">Get Stuff</button>
+		
+		<div id="loadingArea"></div>
+		
+	</body>
+</html>

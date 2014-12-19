@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Events</title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width">
+		<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+
+	</head>
+	<body>
+
+		<p>Click me!</p>
+		<p>Or me!</p>
+		<p>How about me?</p>
+
+
+		<script>
+		$("p").hover(
+			function(e) {
+				var paraText = $(this).text();
+				console.log("over "+paraText);
+			},function(e) {
+				var paraText = $(this).text();
+				console.log("out "+paraText);
+			}
+		);
+		</script>
+		
+	</body>
+</html>

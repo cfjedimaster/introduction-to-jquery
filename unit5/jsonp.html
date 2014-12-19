@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>AJAX Tests</title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width">
+		<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+		<script>
+		$(document).ready(function() {
+			
+			$("#getStuffButton").click(function() {
+				
+				var search = $("#search").val();
+				
+				$.get("https://api.github.com/search/repositories", {"q":search}, function(data) {
+					console.dir(data);
+				},"JSONP");
+				
+			});
+			
+		});
+		</script>
+	</head>
+	<body>
+
+		<input type="search" id="search" placeholder="Search GitHub">
+		<button id="getStuffButton">Get Stuff</button>
+		
+		<div id="loadingArea"></div>
+		
+	</body>
+</html>
