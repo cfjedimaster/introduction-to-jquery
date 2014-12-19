@@ -1,6 +1,11 @@
 Errata
 ===
 
+Unit 1
+---
+
+Robert Zehnder reminded me that a lot of people leave off the http: in front of CDN users so that it works over both http and https. That's a good idea and one I should have mentioned.
+
 Unit 5 Ajax
 ---
 
